@@ -11,12 +11,14 @@
       font-family: Arial, sans-serif;
       font-size: 10.5pt;
       color: #000;
-      background: #fff;
+      background: #fff; 
+
       line-height: 1.4;
     }
 
     .page {
-      max-width: 780px;
+      max-width: 780px; 
+      
       margin: 0 auto;
       padding: 28px 36px;
     }
@@ -119,9 +121,40 @@
     .add-item { font-size: 9.8pt; margin-bottom: 2px; }
     .add-item b { font-weight: bold; }
 
+    @page {
+      size: A4;
+      margin: 9mm;
+    }
+
     @media print {
-      body { font-size: 10pt; }
-      .page { padding: 18px 24px; }
+      body {
+        font-size: 8.5pt;
+        line-height: 1.2;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        width: 192mm;
+        max-width: none;
+        min-height: 279mm;
+        margin: 0;
+        padding: 0;
+      }
+
+      .header { margin-bottom: 5px; }
+      .header h1 { font-size: 14pt; margin-bottom: 2px; }
+      .contact-line { font-size: 8.3pt; }
+      .section { margin-top: 6px; }
+      .section-title { font-size: 9.5pt; margin-bottom: 3px; }
+      .skill-row, ul.bullets li, .cert-item, .add-item { font-size: 8.3pt; line-height: 1.2; }
+      .skill-row, ul.bullets li { margin-bottom: 1px; }
+      .project-block { margin-bottom: 5px; break-inside: avoid; }
+      .project-header, .exp-header { margin-bottom: 1px; }
+      .project-title, .exp-left .exp-title { font-size: 8.7pt; }
+      .project-links a, .exp-left .exp-org, .exp-right { font-size: 8.3pt; }
+      ul.bullets { margin-left: 15px; margin-top: 1px; }
+      .certs-grid { gap: 1px 18px; }
     }
   </style>
 </head>
